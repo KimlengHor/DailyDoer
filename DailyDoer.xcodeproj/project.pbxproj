@@ -8,21 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		716E68982A7318B90010E89F /* DailyDoerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68972A7318B90010E89F /* DailyDoerApp.swift */; };
-		716E689A2A7318B90010E89F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68992A7318B90010E89F /* ContentView.swift */; };
 		716E689C2A7318BD0010E89F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689B2A7318BD0010E89F /* Assets.xcassets */; };
 		716E689F2A7318BD0010E89F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689E2A7318BD0010E89F /* Preview Assets.xcassets */; };
 		716E68A12A7318BD0010E89F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68A02A7318BD0010E89F /* Persistence.swift */; };
 		716E68A42A7318BD0010E89F /* DailyDoer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 716E68A22A7318BD0010E89F /* DailyDoer.xcdatamodeld */; };
+		716E68AB2A7319B60010E89F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68AA2A7319B60010E89F /* ContentView.swift */; };
+		716E68B02A731AD60010E89F /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68AF2A731AD60010E89F /* TaskView.swift */; };
+		716E68B32A731F870010E89F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68B22A731F870010E89F /* Color.swift */; };
+		716E68B62A7324F30010E89F /* NeubrutalismViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68B52A7324F30010E89F /* NeubrutalismViewModifier.swift */; };
+		71ACDC302A74576C007CB6D5 /* ScalingPressableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC2F2A74576C007CB6D5 /* ScalingPressableButtonStyle.swift */; };
+		71ACDC322A75CEE3007CB6D5 /* NeubrutalismPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC312A75CEE3007CB6D5 /* NeubrutalismPicker.swift */; };
+		71ACDC342A75D104007CB6D5 /* TaskTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC332A75D104007CB6D5 /* TaskTile.swift */; };
+		71ACDC362A76A643007CB6D5 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC352A76A643007CB6D5 /* EditTaskView.swift */; };
+		71ACDC382A76CA89007CB6D5 /* SaveTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC372A76CA89007CB6D5 /* SaveTaskView.swift */; };
+		71ACDC3A2A76CAEF007CB6D5 /* FeedbacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC392A76CAEF007CB6D5 /* FeedbacksView.swift */; };
+		71ACDC3C2A76CB9B007CB6D5 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC3B2A76CB9B007CB6D5 /* InformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		716E68942A7318B90010E89F /* DailyDoer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716E68972A7318B90010E89F /* DailyDoerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoerApp.swift; sourceTree = "<group>"; };
-		716E68992A7318B90010E89F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		716E689B2A7318BD0010E89F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716E689E2A7318BD0010E89F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		716E68A02A7318BD0010E89F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		716E68A32A7318BD0010E89F /* DailyDoer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDoer.xcdatamodel; sourceTree = "<group>"; };
+		716E68AA2A7319B60010E89F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		716E68AF2A731AD60010E89F /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		716E68B22A731F870010E89F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		716E68B52A7324F30010E89F /* NeubrutalismViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismViewModifier.swift; sourceTree = "<group>"; };
+		71ACDC2F2A74576C007CB6D5 /* ScalingPressableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalingPressableButtonStyle.swift; sourceTree = "<group>"; };
+		71ACDC312A75CEE3007CB6D5 /* NeubrutalismPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismPicker.swift; sourceTree = "<group>"; };
+		71ACDC332A75D104007CB6D5 /* TaskTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTile.swift; sourceTree = "<group>"; };
+		71ACDC352A76A643007CB6D5 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		71ACDC372A76CA89007CB6D5 /* SaveTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTaskView.swift; sourceTree = "<group>"; };
+		71ACDC392A76CAEF007CB6D5 /* FeedbacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbacksView.swift; sourceTree = "<group>"; };
+		71ACDC3B2A76CB9B007CB6D5 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +75,14 @@
 		716E68962A7318B90010E89F /* DailyDoer */ = {
 			isa = PBXGroup;
 			children = (
+				716E68B72A73287E0010E89F /* Component */,
+				716E68B42A7324E50010E89F /* Style */,
+				716E68B12A731F7E0010E89F /* Extension */,
+				716E68AE2A7319D70010E89F /* ViewModel */,
+				716E68AD2A7319D10010E89F /* Model */,
+				716E68AC2A7319C90010E89F /* View */,
 				716E68972A7318B90010E89F /* DailyDoerApp.swift */,
-				716E68992A7318B90010E89F /* ContentView.swift */,
+				716E68AA2A7319B60010E89F /* ContentView.swift */,
 				716E689B2A7318BD0010E89F /* Assets.xcassets */,
 				716E68A02A7318BD0010E89F /* Persistence.swift */,
 				716E68A22A7318BD0010E89F /* DailyDoer.xcdatamodeld */,
@@ -71,6 +97,58 @@
 				716E689E2A7318BD0010E89F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		716E68AC2A7319C90010E89F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				716E68AF2A731AD60010E89F /* TaskView.swift */,
+				71ACDC352A76A643007CB6D5 /* EditTaskView.swift */,
+				71ACDC372A76CA89007CB6D5 /* SaveTaskView.swift */,
+				71ACDC392A76CAEF007CB6D5 /* FeedbacksView.swift */,
+				71ACDC3B2A76CB9B007CB6D5 /* InformationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		716E68AD2A7319D10010E89F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		716E68AE2A7319D70010E89F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		716E68B12A731F7E0010E89F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				716E68B22A731F870010E89F /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		716E68B42A7324E50010E89F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				716E68B52A7324F30010E89F /* NeubrutalismViewModifier.swift */,
+				71ACDC2F2A74576C007CB6D5 /* ScalingPressableButtonStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		716E68B72A73287E0010E89F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				71ACDC312A75CEE3007CB6D5 /* NeubrutalismPicker.swift */,
+				71ACDC332A75D104007CB6D5 /* TaskTile.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +222,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				716E68A12A7318BD0010E89F /* Persistence.swift in Sources */,
-				716E689A2A7318B90010E89F /* ContentView.swift in Sources */,
+				71ACDC302A74576C007CB6D5 /* ScalingPressableButtonStyle.swift in Sources */,
+				71ACDC382A76CA89007CB6D5 /* SaveTaskView.swift in Sources */,
 				716E68982A7318B90010E89F /* DailyDoerApp.swift in Sources */,
+				71ACDC322A75CEE3007CB6D5 /* NeubrutalismPicker.swift in Sources */,
+				716E68AB2A7319B60010E89F /* ContentView.swift in Sources */,
+				716E68B02A731AD60010E89F /* TaskView.swift in Sources */,
+				71ACDC3C2A76CB9B007CB6D5 /* InformationView.swift in Sources */,
+				71ACDC342A75D104007CB6D5 /* TaskTile.swift in Sources */,
+				71ACDC362A76A643007CB6D5 /* EditTaskView.swift in Sources */,
+				716E68B62A7324F30010E89F /* NeubrutalismViewModifier.swift in Sources */,
 				716E68A42A7318BD0010E89F /* DailyDoer.xcdatamodeld in Sources */,
+				71ACDC3A2A76CAEF007CB6D5 /* FeedbacksView.swift in Sources */,
+				716E68B32A731F870010E89F /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

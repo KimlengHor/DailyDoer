@@ -86,6 +86,7 @@ extension TaskView {
                 }
             }
             .padding(.top, 15)
+            .padding(.horizontal, 24)
         }
     }
 }

@@ -27,7 +27,15 @@ struct FeedbacksView: View {
 
 struct FeedbackView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbacksView()
+        ZStack {
+            VStack {
+                
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.black)
+            
+            FeedbacksView()
+        }
     }
 }
 
