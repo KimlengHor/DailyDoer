@@ -62,9 +62,7 @@ extension FeedbacksView {
     }
     
     private var feedbacksTextField: some View {
-        TextField("Write down your feedbacks here", text: $taskText)
-            .padding(.horizontal, 15)
-            .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
+        NeubrutalismTextField(placeholder: "Write down your feedbacks here", taskText: $taskText)
             .padding(.bottom, 21)
     }
     

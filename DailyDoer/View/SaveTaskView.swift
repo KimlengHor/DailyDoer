@@ -62,9 +62,7 @@ extension SaveTaskView {
     }
     
     private var taskTextField: some View {
-        TextField("Write down your task here", text: $taskText)
-            .padding(.horizontal, 15)
-            .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
+        NeubrutalismTextField(placeholder: "Write down your task here", taskText: $taskText)
             .padding(.bottom, 21)
     }
     

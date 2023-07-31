@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710513382A7870D8001E0867 /* NeubrutalismTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710513372A7870D8001E0867 /* NeubrutalismTextField.swift */; };
 		716E68982A7318B90010E89F /* DailyDoerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68972A7318B90010E89F /* DailyDoerApp.swift */; };
 		716E689C2A7318BD0010E89F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689B2A7318BD0010E89F /* Assets.xcassets */; };
 		716E689F2A7318BD0010E89F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689E2A7318BD0010E89F /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		710513372A7870D8001E0867 /* NeubrutalismTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismTextField.swift; sourceTree = "<group>"; };
 		716E68942A7318B90010E89F /* DailyDoer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716E68972A7318B90010E89F /* DailyDoerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoerApp.swift; sourceTree = "<group>"; };
 		716E689B2A7318BD0010E89F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				71ACDC312A75CEE3007CB6D5 /* NeubrutalismPicker.swift */,
 				71ACDC332A75D104007CB6D5 /* TaskTile.swift */,
+				710513372A7870D8001E0867 /* NeubrutalismTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				716E68A12A7318BD0010E89F /* Persistence.swift in Sources */,
 				71ACDC302A74576C007CB6D5 /* ScalingPressableButtonStyle.swift in Sources */,
 				71ACDC382A76CA89007CB6D5 /* SaveTaskView.swift in Sources */,
+				710513382A7870D8001E0867 /* NeubrutalismTextField.swift in Sources */,
 				716E68982A7318B90010E89F /* DailyDoerApp.swift in Sources */,
 				71ACDC322A75CEE3007CB6D5 /* NeubrutalismPicker.swift in Sources */,
 				716E68AB2A7319B60010E89F /* ContentView.swift in Sources */,
