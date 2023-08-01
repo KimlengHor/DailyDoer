@@ -47,16 +47,9 @@ extension SaveTaskView {
                 .bold()
                 .frame(maxWidth: .infinity)
             
-            Button {
+            NeubrutalismButton(width: 30, height: 30, backgroundColor: Color.theme.red, action: {
                 
-            } label: {
-                Image(systemName: "xmark")
-                    .withNeubrutalismDesign(
-                        width: 30,
-                        height: 30,
-                        backgroundColor: Color.theme.red)
-            }
-            .withScalingPressableStyle()
+            }, label: Image(systemName: "xmark"))
         }
         .padding(.bottom, 23)
     }
@@ -67,17 +60,10 @@ extension SaveTaskView {
     }
     
     private var saveButton: some View {
-        Button {
+        NeubrutalismButton(maxWidth: .infinity, height: 40, backgroundColor: Color.theme.accent, action: {
             
-        } label: {
-            Text("Save")
-                .font(.callout)
-                .bold()
-                .withNeubrutalismDesign(
-                    maxWidth: .infinity,
-                    height: 40,
-                    backgroundColor: Color.theme.accent)
-        }
-        .withScalingPressableStyle()
+        }, label: Text("Save")
+            .font(.callout)
+            .bold())
     }
 }

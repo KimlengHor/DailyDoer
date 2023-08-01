@@ -52,30 +52,15 @@ extension TaskView {
     }
     
     private var trailingToolbarItem: some View {
-        Button {
+        NeubrutalismButton(width: 40, height: 40, backgroundColor: Color.theme.orange, action: {
             
-        } label: {
-            Image(systemName: "info")
-                .withNeubrutalismDesign(
-                    width: 40,
-                    height: 40,
-                    backgroundColor: Color.theme.orange)
-        }
-        .withScalingPressableStyle()
+        }, label: Image(systemName: "info"))
     }
     
     private var addTaskButton: some View {
-        Button {
+        NeubrutalismButton(width: 50, height: 50, backgroundColor: Color.theme.accent, action: {
             
-        } label: {
-            Image(systemName: "plus")
-                .font(.title)
-                .withNeubrutalismDesign(
-                    width: 50,
-                    height: 50,
-                    backgroundColor: Color.theme.accent)
-        }
-        .withScalingPressableStyle()
+        }, label: Image(systemName: "plus"))
     }
     
     private var taskList: some View {

@@ -17,35 +17,14 @@ struct InformationView: View {
                 .foregroundColor(Color.gray)
                 .padding(.bottom, 10)
             VStack(spacing: 17) {
-                Button {
-                    
-                } label: {
-                    HStack {
-                        Text("Give Feedbacks")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                        
-                        Spacer()
-                    }
-                    .padding(.leading, 15)
-                    .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
-                }
-                .withScalingPressableStyle()
                 
-                Button {
+                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
                     
-                } label: {
-                    HStack {
-                        Text("Suggest Features")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                        
-                        Spacer()
-                    }
-                    .padding(.leading, 15)
-                    .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
-                }
-                .withScalingPressableStyle()
+                }, label: informationButton(text: "Give Feedbacks"))
+                
+                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
+                    
+                }, label: informationButton(text: "Suggest Features"))
             }
             
             Text("MORE")
@@ -56,50 +35,19 @@ struct InformationView: View {
                 .padding(.top, 30)
             
             VStack(spacing: 17) {
-                Button {
-                    
-                } label: {
-                    HStack {
-                        Text("Terms and condition")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                        
-                        Spacer()
-                    }
-                    .padding(.leading, 15)
-                    .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
-                }
-                .withScalingPressableStyle()
                 
-                Button {
+                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
                     
-                } label: {
-                    HStack {
-                        Text("Privacy Policy")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                        
-                        Spacer()
-                    }
-                    .padding(.leading, 15)
-                    .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
-                }
-                .withScalingPressableStyle()
+                }, label: informationButton(text: "Terms and condition"))
                 
-                Button {
+                
+                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
                     
-                } label: {
-                    HStack {
-                        Text("About me")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                        
-                        Spacer()
-                    }
-                    .padding(.leading, 15)
-                    .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
-                }
-                .withScalingPressableStyle()
+                }, label: informationButton(text: "Privacy Policy"))
+                
+                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
+                    
+                }, label: informationButton(text: "About Me"))
             }
             
             Spacer()
@@ -122,17 +70,21 @@ extension InformationView {
                 .bold()
                 .frame(maxWidth: .infinity)
 
-            Button {
-
-            } label: {
-                Image(systemName: "xmark")
-                    .withNeubrutalismDesign(
-                        width: 40,
-                        height: 40,
-                        backgroundColor: Color.theme.red)
-            }
-            .withScalingPressableStyle()
+            NeubrutalismButton(width: 40, height: 40, backgroundColor: Color.theme.red, action: {
+                
+            }, label: Image(systemName: "xmark"))
         }
         .padding(.bottom, 35)
+    }
+    
+    private func informationButton(text: String) -> some View {
+        HStack {
+            Text(text)
+                .font(.headline)
+                .fontWeight(.medium)
+            
+            Spacer()
+        }
+        .padding(.leading, 15)
     }
 }
