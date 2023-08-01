@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		710513382A7870D8001E0867 /* NeubrutalismTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710513372A7870D8001E0867 /* NeubrutalismTextField.swift */; };
+		7105133A2A7875B8001E0867 /* NeubrutalismButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710513392A7875B8001E0867 /* NeubrutalismButton.swift */; };
 		716E68982A7318B90010E89F /* DailyDoerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68972A7318B90010E89F /* DailyDoerApp.swift */; };
 		716E689C2A7318BD0010E89F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689B2A7318BD0010E89F /* Assets.xcassets */; };
 		716E689F2A7318BD0010E89F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689E2A7318BD0010E89F /* Preview Assets.xcassets */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		710513372A7870D8001E0867 /* NeubrutalismTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismTextField.swift; sourceTree = "<group>"; };
+		710513392A7875B8001E0867 /* NeubrutalismButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismButton.swift; sourceTree = "<group>"; };
 		716E68942A7318B90010E89F /* DailyDoer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716E68972A7318B90010E89F /* DailyDoerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoerApp.swift; sourceTree = "<group>"; };
 		716E689B2A7318BD0010E89F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				71ACDC312A75CEE3007CB6D5 /* NeubrutalismPicker.swift */,
 				71ACDC332A75D104007CB6D5 /* TaskTile.swift */,
 				710513372A7870D8001E0867 /* NeubrutalismTextField.swift */,
+				710513392A7875B8001E0867 /* NeubrutalismButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				716E68B02A731AD60010E89F /* TaskView.swift in Sources */,
 				71ACDC3C2A76CB9B007CB6D5 /* InformationView.swift in Sources */,
 				71ACDC342A75D104007CB6D5 /* TaskTile.swift in Sources */,
+				7105133A2A7875B8001E0867 /* NeubrutalismButton.swift in Sources */,
 				71ACDC362A76A643007CB6D5 /* EditTaskView.swift in Sources */,
 				716E68B62A7324F30010E89F /* NeubrutalismViewModifier.swift in Sources */,
 				716E68A42A7318BD0010E89F /* DailyDoer.xcdatamodeld in Sources */,
