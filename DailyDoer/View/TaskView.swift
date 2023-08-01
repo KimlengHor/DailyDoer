@@ -40,6 +40,21 @@ struct TaskView_Previews: PreviewProvider {
 }
 
 extension TaskView {
+    private var taskList: some View {
+        ScrollView(showsIndicators: false) {
+            LazyVStack(spacing: 17) {
+                if selection == .first {
+                    pendingTaskList
+                        .padding(.horizontal, 24)
+                } else {
+                    completedTaskList
+                        .padding(.horizontal, 24)
+                }
+            }
+            .padding(.top, 15)
+        }
+    }
+    
     private var taskLargeTitle: some View {
         HStack {
             Text("Tasks")
@@ -59,19 +74,21 @@ extension TaskView {
     
     private var addTaskButton: some View {
         NeubrutalismButton(width: 50, height: 50, backgroundColor: Color.theme.accent, action: {
-            
+        
         }, label: Image(systemName: "plus"))
     }
     
-    private var taskList: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVStack(spacing: 17) {
-                ForEach(0..<10) { _ in
-                    TaskTile(taskText: "Do my homework")
-                }
-            }
-            .padding(.top, 15)
-            .padding(.horizontal, 24)
+    private var pendingTaskList: some View {
+        ForEach(0..<10) { _ in
+            TaskTile(taskText: "Do my homework")
         }
+        .transition(.move(edge: .leading))
+    }
+    
+    private var completedTaskList: some View {
+        ForEach(0..<10) { _ in
+            TaskTile(taskText: "Go grocery man")
+        }
+        .transition(.move(edge: .trailing))
     }
 }
