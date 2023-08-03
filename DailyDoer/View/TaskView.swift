@@ -9,17 +9,24 @@ import SwiftUI
 
 struct TaskView: View {
     
+    @EnvironmentObject private var vm: TaskViewModel
+    
     @State private var selection: PickerOption = .first
+    @State private var showSaveTaskView = false
     
     var body: some View {
-        VStack {
-            taskLargeTitle
+        ZStack {
+            VStack {
+                taskLargeTitle
+                
+                NeubrutalismPicker(firstOption: "Pending", secondOption: "Completed", selection: $selection)
+                
+                taskList
+                
+                addTaskButton
+            }
             
-            NeubrutalismPicker(firstOption: "Pending", secondOption: "Completed", selection: $selection)
-            
-            taskList
-            
-            addTaskButton
+            saveTaskView
         }
         .navigationTitle("DailyDoer")
         .navigationBarTitleDisplayMode(.inline)
@@ -36,6 +43,7 @@ struct TaskView_Previews: PreviewProvider {
         NavigationStack {
             TaskView()
         }
+        .environmentObject(TaskViewModel())
     }
 }
 
@@ -46,12 +54,14 @@ extension TaskView {
                 if selection == .first {
                     pendingTaskList
                         .padding(.horizontal, 24)
+                        .transition(.move(edge: .leading))
                 } else {
                     completedTaskList
                         .padding(.horizontal, 24)
+                        .transition(.move(edge: .trailing))
                 }
             }
-            .padding(.top, 15)
+            .padding(.vertical, 15)
         }
     }
     
@@ -74,21 +84,35 @@ extension TaskView {
     
     private var addTaskButton: some View {
         NeubrutalismButton(width: 50, height: 50, backgroundColor: Color.theme.accent, action: {
-        
+            withAnimation(.easeInOut(duration: 0.1)) {
+                showSaveTaskView = true
+            }
         }, label: Image(systemName: "plus"))
     }
     
     private var pendingTaskList: some View {
-        ForEach(0..<10) { _ in
-            TaskTile(taskText: "Do my homework")
+        ForEach(vm.pendingTasks) { task in
+            TaskTile(task: task) {
+                vm.completeTask(task: task)
+            }
         }
-        .transition(.move(edge: .leading))
     }
     
     private var completedTaskList: some View {
-        ForEach(0..<10) { _ in
-            TaskTile(taskText: "Go grocery man")
+        ForEach(vm.completedTasks) { task in
+            TaskTile(task: task) {
+                
+            }
         }
-        .transition(.move(edge: .trailing))
+    }
+    
+    private var saveTaskView: some View {
+        VStack {
+            if showSaveTaskView {
+                SaveTaskView(showSaveTaskView: $showSaveTaskView)
+                    .shadow(radius: 100)
+                    .transition(.scale(scale: 1.2))
+            }
+        }
     }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 @main
 struct DailyDoerApp: App {
-    let persistenceController = PersistenceController.shared
+    
+    @StateObject private var vm = TaskViewModel()
 
     var body: some Scene {
         WindowGroup {
@@ -18,6 +19,7 @@ struct DailyDoerApp: App {
             NavigationStack {
                 TaskView()
             }
+            .environmentObject(vm)
         }
     }
 }

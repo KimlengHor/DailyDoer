@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TaskTile: View {
     
-    let taskText: String
+    let task: TaskEntity
+    let completeAction: () -> Void
     
     var body: some View {
         ZStack(alignment: .trailing) {
@@ -17,7 +18,7 @@ struct TaskTile: View {
                 
             } label: {
                 HStack {
-                    Text(taskText)
+                    Text(task.title ?? "")
                         .font(.headline)
                         .fontWeight(.medium)
                     
@@ -28,23 +29,23 @@ struct TaskTile: View {
             }
             .withScalingPressableStyle()
             
-            Button {
-                
-            } label: {
+            Button(action: completeAction, label: {
                 VStack {
-                    
+                    if task.isCompleted {
+                        Image(systemName: "checkmark")
+                    }
                 }
-                .withNeubrutalismDesign(width: 24, height: 24, offsetVal: 2)
+                .withNeubrutalismDesign(width: 24, height: 24, backgroundColor: task.isCompleted ? Color.theme.green : Color.white, offsetVal: 2)
                 .padding(.trailing, 15)
-            }
+            })
             .withScalingPressableStyle()
         }
     }
 }
 
 struct TaskTile_Previews: PreviewProvider {
+    
     static var previews: some View {
-        TaskTile(taskText: "Do my homework")
-            .padding(24)
+        TaskView()
     }
 }
