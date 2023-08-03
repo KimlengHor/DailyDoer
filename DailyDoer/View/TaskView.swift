@@ -12,7 +12,9 @@ struct TaskView: View {
     @EnvironmentObject private var vm: TaskViewModel
     
     @State private var selection: PickerOption = .first
+    
     @State private var showSaveTaskView = false
+    @State private var showEditTaskView = false
     
     var body: some View {
         ZStack {
@@ -27,6 +29,8 @@ struct TaskView: View {
             }
             
             saveTaskView
+            
+            editTaskView
         }
         .navigationTitle("DailyDoer")
         .navigationBarTitleDisplayMode(.inline)
@@ -94,6 +98,11 @@ extension TaskView {
         ForEach(vm.pendingTasks) { task in
             TaskTile(task: task) {
                 vm.completeTask(task: task)
+            } detailAction: {
+                vm.selectedTask = task
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    showEditTaskView = true
+                }
             }
         }
     }
@@ -101,6 +110,8 @@ extension TaskView {
     private var completedTaskList: some View {
         ForEach(vm.completedTasks) { task in
             TaskTile(task: task) {
+                
+            } detailAction: {
                 
             }
         }
@@ -110,6 +121,16 @@ extension TaskView {
         VStack {
             if showSaveTaskView {
                 SaveTaskView(showSaveTaskView: $showSaveTaskView)
+                    .shadow(radius: 100)
+                    .transition(.scale(scale: 1.2))
+            }
+        }
+    }
+    
+    private var editTaskView: some View {
+        VStack {
+            if showEditTaskView {
+                EditTaskView(taskText: vm.selectedTask?.title ?? "", showEditTaskView: $showEditTaskView)
                     .shadow(radius: 100)
                     .transition(.scale(scale: 1.2))
             }

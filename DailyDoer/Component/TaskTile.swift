@@ -11,12 +11,11 @@ struct TaskTile: View {
     
     let task: TaskEntity
     let completeAction: () -> Void
+    let detailAction: () -> Void
     
     var body: some View {
         ZStack(alignment: .trailing) {
-            Button {
-                
-            } label: {
+            Button(action: detailAction, label: {
                 HStack {
                     Text(task.title ?? "")
                         .font(.headline)
@@ -26,7 +25,7 @@ struct TaskTile: View {
                 }
                 .padding(.leading, 15)
                 .withNeubrutalismDesign(maxWidth: .infinity, height: 48)
-            }
+            })
             .withScalingPressableStyle()
             
             Button(action: completeAction, label: {
