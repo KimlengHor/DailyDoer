@@ -9,7 +9,10 @@ import SwiftUI
 
 struct EditTaskView: View {
     
-    @State private var taskText: String = ""
+    @EnvironmentObject private var vm: TaskViewModel
+    
+    @State var taskText: String
+    @Binding var showEditTaskView: Bool
     
     var body: some View {
         VStack {
@@ -26,19 +29,19 @@ struct EditTaskView: View {
     }
 }
 
-struct EditTaskView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            VStack {
-                
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.black)
-            
-            EditTaskView()
-        }
-    }
-}
+//struct EditTaskView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ZStack {
+//            VStack {
+//
+//            }
+//            .frame(maxWidth: .infinity, maxHeight: .infinity)
+//            .background(.black)
+//
+//            EditTaskView()
+//        }
+//    }
+//}
 
 extension EditTaskView {
     private var header: some View {
@@ -49,7 +52,9 @@ extension EditTaskView {
                 .frame(maxWidth: .infinity)
             
             NeubrutalismButton(width: 30, height: 30, backgroundColor: Color.theme.red, action: {
-                
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    showEditTaskView = false
+                }
             }, label: Image(systemName: "xmark"))
         }
         .padding(.bottom, 23)
@@ -70,7 +75,10 @@ extension EditTaskView {
                 .bold())
             
             NeubrutalismButton(maxWidth: .infinity, height: 40, backgroundColor: Color.theme.accent, action: {
-                
+                vm.editTask(title: taskText)
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    showEditTaskView = false
+                }
             }, label: Text("Save")
                 .font(.callout)
                 .bold())

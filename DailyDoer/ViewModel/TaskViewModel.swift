@@ -25,6 +25,8 @@ class TaskViewModel: ObservableObject {
     @Published var pendingTasks: [TaskEntity] = []
     @Published var completedTasks: [TaskEntity] = []
     
+    var selectedTask: TaskEntity?
+    
     init() {
         container = NSPersistentContainer(name: "DailyDoer")
         container.loadPersistentStores { description, error in
@@ -82,6 +84,12 @@ class TaskViewModel: ObservableObject {
         newTask.title = title
         newTask.timestamp = Date()
         newTask.isCompleted = false
+        saveData()
+    }
+    
+    func editTask(title: String) {
+        guard let task = selectedTask else { return }
+        task.title = title
         saveData()
     }
     
