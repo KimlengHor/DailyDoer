@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		710513382A7870D8001E0867 /* NeubrutalismTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710513372A7870D8001E0867 /* NeubrutalismTextField.swift */; };
 		7105133A2A7875B8001E0867 /* NeubrutalismButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710513392A7875B8001E0867 /* NeubrutalismButton.swift */; };
+		710513502A79AA13001E0867 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105134F2A79AA13001E0867 /* TaskViewModel.swift */; };
 		716E68982A7318B90010E89F /* DailyDoerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68972A7318B90010E89F /* DailyDoerApp.swift */; };
 		716E689C2A7318BD0010E89F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689B2A7318BD0010E89F /* Assets.xcassets */; };
 		716E689F2A7318BD0010E89F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E689E2A7318BD0010E89F /* Preview Assets.xcassets */; };
-		716E68A12A7318BD0010E89F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68A02A7318BD0010E89F /* Persistence.swift */; };
 		716E68A42A7318BD0010E89F /* DailyDoer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 716E68A22A7318BD0010E89F /* DailyDoer.xcdatamodeld */; };
-		716E68AB2A7319B60010E89F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68AA2A7319B60010E89F /* ContentView.swift */; };
 		716E68B02A731AD60010E89F /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68AF2A731AD60010E89F /* TaskView.swift */; };
 		716E68B32A731F870010E89F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68B22A731F870010E89F /* Color.swift */; };
 		716E68B62A7324F30010E89F /* NeubrutalismViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68B52A7324F30010E89F /* NeubrutalismViewModifier.swift */; };
@@ -30,13 +29,12 @@
 /* Begin PBXFileReference section */
 		710513372A7870D8001E0867 /* NeubrutalismTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismTextField.swift; sourceTree = "<group>"; };
 		710513392A7875B8001E0867 /* NeubrutalismButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismButton.swift; sourceTree = "<group>"; };
+		7105134F2A79AA13001E0867 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		716E68942A7318B90010E89F /* DailyDoer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716E68972A7318B90010E89F /* DailyDoerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoerApp.swift; sourceTree = "<group>"; };
 		716E689B2A7318BD0010E89F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716E689E2A7318BD0010E89F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		716E68A02A7318BD0010E89F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		716E68A32A7318BD0010E89F /* DailyDoer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDoer.xcdatamodel; sourceTree = "<group>"; };
-		716E68AA2A7319B60010E89F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		716E68AF2A731AD60010E89F /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		716E68B22A731F870010E89F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		716E68B52A7324F30010E89F /* NeubrutalismViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismViewModifier.swift; sourceTree = "<group>"; };
@@ -86,9 +84,7 @@
 				716E68AD2A7319D10010E89F /* Model */,
 				716E68AC2A7319C90010E89F /* View */,
 				716E68972A7318B90010E89F /* DailyDoerApp.swift */,
-				716E68AA2A7319B60010E89F /* ContentView.swift */,
 				716E689B2A7318BD0010E89F /* Assets.xcassets */,
-				716E68A02A7318BD0010E89F /* Persistence.swift */,
 				716E68A22A7318BD0010E89F /* DailyDoer.xcdatamodeld */,
 				716E689D2A7318BD0010E89F /* Preview Content */,
 			);
@@ -125,6 +121,7 @@
 		716E68AE2A7319D70010E89F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7105134F2A79AA13001E0867 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -227,13 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				716E68A12A7318BD0010E89F /* Persistence.swift in Sources */,
 				71ACDC302A74576C007CB6D5 /* ScalingPressableButtonStyle.swift in Sources */,
 				71ACDC382A76CA89007CB6D5 /* SaveTaskView.swift in Sources */,
 				710513382A7870D8001E0867 /* NeubrutalismTextField.swift in Sources */,
 				716E68982A7318B90010E89F /* DailyDoerApp.swift in Sources */,
 				71ACDC322A75CEE3007CB6D5 /* NeubrutalismPicker.swift in Sources */,
-				716E68AB2A7319B60010E89F /* ContentView.swift in Sources */,
 				716E68B02A731AD60010E89F /* TaskView.swift in Sources */,
 				71ACDC3C2A76CB9B007CB6D5 /* InformationView.swift in Sources */,
 				71ACDC342A75D104007CB6D5 /* TaskTile.swift in Sources */,
@@ -243,6 +238,7 @@
 				716E68A42A7318BD0010E89F /* DailyDoer.xcdatamodeld in Sources */,
 				71ACDC3A2A76CAEF007CB6D5 /* FeedbacksView.swift in Sources */,
 				716E68B32A731F870010E89F /* Color.swift in Sources */,
+				710513502A79AA13001E0867 /* TaskViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +375,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +405,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

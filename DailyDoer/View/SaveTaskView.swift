@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct SaveTaskView: View {
+    
+    @EnvironmentObject private var vm: TaskViewModel
+    
     @State private var taskText: String = ""
+    @Binding var showSaveTaskView: Bool
     
     var body: some View {
         VStack {
@@ -34,8 +38,9 @@ struct SaveTaskView_Previews: PreviewProvider {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.black)
             
-            SaveTaskView()
+            SaveTaskView(showSaveTaskView: .constant(true))
         }
+        .environmentObject(TaskViewModel())
     }
 }
 
@@ -48,7 +53,9 @@ extension SaveTaskView {
                 .frame(maxWidth: .infinity)
             
             NeubrutalismButton(width: 30, height: 30, backgroundColor: Color.theme.red, action: {
-                
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    showSaveTaskView = false
+                }
             }, label: Image(systemName: "xmark"))
         }
         .padding(.bottom, 23)
@@ -61,7 +68,10 @@ extension SaveTaskView {
     
     private var saveButton: some View {
         NeubrutalismButton(maxWidth: .infinity, height: 40, backgroundColor: Color.theme.accent, action: {
-            
+            vm.addTask(title: taskText)
+            withAnimation(.easeInOut(duration: 0.1)) {
+                showSaveTaskView = false
+            }
         }, label: Text("Save")
             .font(.callout)
             .bold())
