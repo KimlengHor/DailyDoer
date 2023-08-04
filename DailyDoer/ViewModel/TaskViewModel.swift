@@ -12,10 +12,12 @@ import SwiftUI
 //struct Task {
 //    let title: String
 //    let date: Date
+//    let isCompleted: Bool
 //
 //    init(title: String) {
 //        self.title = title
 //        self.date = Date()
+//        self.isCompleted = false
 //    }
 //}
 
@@ -52,28 +54,16 @@ class TaskViewModel: ObservableObject {
     }
     
     func fetchPendingTasks() {
-        let predicate = NSPredicate(format: "isCompleted = %@", NSNumber(value: false))
-        let request = NSFetchRequest<TaskEntity>(entityName: "TaskEntity")
-        
-        request.predicate = predicate
-        request.sortDescriptors = getSortDescriptors()
-        
         do {
-            pendingTasks = try container.viewContext.fetch(request)
+            pendingTasks = try container.fetchTask(isCompleted: false)
         } catch {
             print("Error fetching \(error.localizedDescription)")
         }
     }
     
     func fetchCompletedTasks() {
-        let predicate = NSPredicate(format: "isCompleted = %@", NSNumber(value: true))
-        let request = NSFetchRequest<TaskEntity>(entityName: "TaskEntity")
-        
-        request.predicate = predicate
-        request.sortDescriptors = getSortDescriptors()
-        
         do {
-            completedTasks = try container.viewContext.fetch(request)
+            completedTasks = try container.fetchTask(isCompleted: true)
         } catch {
             print("Error fetching \(error.localizedDescription)")
         }
@@ -105,7 +95,22 @@ class TaskViewModel: ObservableObject {
     func completeTask(task: TaskEntity) {
         withAnimation(.easeInOut) {
             task.isCompleted = true
+            task.timestamp = Date()
             saveData()
         }
+    }
+}
+
+extension NSPersistentContainer {
+    func fetchTask(isCompleted: Bool) throws -> [TaskEntity] {
+        let predicate = NSPredicate(format: "isCompleted = %@", NSNumber(value: isCompleted))
+        let request = NSFetchRequest<TaskEntity>(entityName: "TaskEntity")
+        let sectionSortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        let sortDescriptors = [sectionSortDescriptor]
+        
+        request.predicate = predicate
+        request.sortDescriptors = sortDescriptors
+        
+        return try self.viewContext.fetch(request)
     }
 }
