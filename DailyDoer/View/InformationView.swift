@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InformationView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack(alignment: .leading) {
             header
@@ -71,7 +74,7 @@ extension InformationView {
                 .frame(maxWidth: .infinity)
 
             NeubrutalismButton(width: 40, height: 40, backgroundColor: Color.theme.red, action: {
-                
+                dismiss()
             }, label: Image(systemName: "xmark"))
         }
         .padding(.bottom, 35)
