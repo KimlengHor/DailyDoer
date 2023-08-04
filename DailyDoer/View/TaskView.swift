@@ -58,20 +58,22 @@ struct TaskView_Previews: PreviewProvider {
 
 extension TaskView {
     private var taskList: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVStack(spacing: 17) {
-                if selection == .first {
+        VStack {
+            if selection == .first {
+                List {
                     pendingTaskList
-                        .padding(.horizontal, 24)
-                        .transition(.move(edge: .leading))
-                } else {
-                    completedTaskList
-                        .padding(.horizontal, 24)
-                        .transition(.move(edge: .trailing))
                 }
+                .transition(.move(edge: .leading))
+            } else {
+                List {
+                    completedTaskList
+                        
+                }
+                .transition(.move(edge: .trailing))
             }
-            .padding(.vertical, 15)
         }
+        .listStyle(.plain)
+        .padding(.horizontal, 12)
     }
     
     private var taskLargeTitle: some View {
