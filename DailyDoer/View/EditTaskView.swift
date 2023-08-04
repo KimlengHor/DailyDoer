@@ -69,7 +69,10 @@ extension EditTaskView {
         HStack(spacing: 8) {
             
             NeubrutalismButton(width: 80, height: 40, backgroundColor: Color.theme.red, action: {
-                
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    vm.deleteTask()
+                    showEditTaskView = false
+                }
             }, label: Text("Delete")
                 .font(.callout)
                 .bold())
