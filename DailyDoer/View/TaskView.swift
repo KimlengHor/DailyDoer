@@ -16,6 +16,8 @@ struct TaskView: View {
     @State private var showSaveTaskView = false
     @State private var showEditTaskView = false
     
+    @State private var showInformationView = false
+    
     var body: some View {
         ZStack {
             VStack {
@@ -38,6 +40,9 @@ struct TaskView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 trailingToolbarItem
             }
+        }
+        .sheet(isPresented: $showInformationView) {
+            InformationView()
         }
     }
 }
@@ -82,7 +87,7 @@ extension TaskView {
     
     private var trailingToolbarItem: some View {
         NeubrutalismButton(width: 40, height: 40, backgroundColor: Color.theme.orange, action: {
-            
+            showInformationView.toggle()
         }, label: Image(systemName: "info"))
     }
     
