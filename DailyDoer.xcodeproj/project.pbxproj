@@ -17,6 +17,7 @@
 		716E68B02A731AD60010E89F /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68AF2A731AD60010E89F /* TaskView.swift */; };
 		716E68B32A731F870010E89F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68B22A731F870010E89F /* Color.swift */; };
 		716E68B62A7324F30010E89F /* NeubrutalismViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716E68B52A7324F30010E89F /* NeubrutalismViewModifier.swift */; };
+		71A33D742A7D84B300DC92C9 /* FocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A33D732A7D84B300DC92C9 /* FocusField.swift */; };
 		71ACDC302A74576C007CB6D5 /* ScalingPressableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC2F2A74576C007CB6D5 /* ScalingPressableButtonStyle.swift */; };
 		71ACDC322A75CEE3007CB6D5 /* NeubrutalismPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC312A75CEE3007CB6D5 /* NeubrutalismPicker.swift */; };
 		71ACDC342A75D104007CB6D5 /* TaskTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACDC332A75D104007CB6D5 /* TaskTile.swift */; };
@@ -38,6 +39,7 @@
 		716E68AF2A731AD60010E89F /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		716E68B22A731F870010E89F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		716E68B52A7324F30010E89F /* NeubrutalismViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismViewModifier.swift; sourceTree = "<group>"; };
+		71A33D732A7D84B300DC92C9 /* FocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusField.swift; sourceTree = "<group>"; };
 		71ACDC2F2A74576C007CB6D5 /* ScalingPressableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalingPressableButtonStyle.swift; sourceTree = "<group>"; };
 		71ACDC312A75CEE3007CB6D5 /* NeubrutalismPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeubrutalismPicker.swift; sourceTree = "<group>"; };
 		71ACDC332A75D104007CB6D5 /* TaskTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTile.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		716E68962A7318B90010E89F /* DailyDoer */ = {
 			isa = PBXGroup;
 			children = (
+				71A33D722A7D849B00DC92C9 /* Utility */,
 				716E68B72A73287E0010E89F /* Component */,
 				716E68B42A7324E50010E89F /* Style */,
 				716E68B12A731F7E0010E89F /* Extension */,
@@ -152,6 +155,14 @@
 				710513392A7875B8001E0867 /* NeubrutalismButton.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		71A33D722A7D849B00DC92C9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				71A33D732A7D84B300DC92C9 /* FocusField.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 				71ACDC3A2A76CAEF007CB6D5 /* FeedbacksView.swift in Sources */,
 				716E68B32A731F870010E89F /* Color.swift in Sources */,
 				710513502A79AA13001E0867 /* TaskViewModel.swift in Sources */,
+				71A33D742A7D84B300DC92C9 /* FocusField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
