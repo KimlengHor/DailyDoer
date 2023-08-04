@@ -11,6 +11,8 @@ struct SaveTaskView: View {
     
     @EnvironmentObject private var vm: TaskViewModel
     
+    @FocusState var focusedField: FocusField?
+    
     @State private var taskText: String = ""
     @Binding var showSaveTaskView: Bool
     
@@ -25,7 +27,9 @@ struct SaveTaskView: View {
         .background(.white)
         .cornerRadius(5)
         .padding(24)
-       
+        .onAppear {
+            focusedField = .focus
+        }
     }
 }
 
@@ -64,6 +68,7 @@ extension SaveTaskView {
     private var taskTextField: some View {
         NeubrutalismTextField(placeholder: "Write down your task here", taskText: $taskText)
             .padding(.bottom, 21)
+            .focused($focusedField, equals: .focus)
     }
     
     private var saveButton: some View {

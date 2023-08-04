@@ -29,6 +29,7 @@ struct TaskView: View {
                 
                 addTaskButton
             }
+            .ignoresSafeArea(.keyboard, edges: .bottom)
             
             saveTaskView
             
