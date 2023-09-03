@@ -67,7 +67,7 @@ struct NeubrutalismPicker: View {
     private func unselectedPickerButton(text: String) -> some View {
         Text(text)
             .font(.callout)
-            .foregroundColor(Color.gray)
+            .foregroundColor(Color.secondary)
     }
 }
 

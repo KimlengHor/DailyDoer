@@ -21,23 +21,23 @@ struct NeubrutalismViewModifier: ViewModifier {
             VStack {}
                 .frame(maxWidth: maxWidth)
                 .frame(width: width, height: height)
-                .background(Color.black)
+                .background(Color(uiColor: .label))
                 .cornerRadius(2)
                 .offset(x: offsetVal, y: offsetVal)
             
             content
-                .foregroundColor(.black)
+                .foregroundColor(Color(uiColor: .label))
                 .frame(maxWidth: maxWidth)
                 .frame(width: width, height: height)
                 .background(backgroundColor)
-                .border(.black, width: 2)
+                .border(Color(uiColor: .label), width: 2)
                 .cornerRadius(2)
         }
     }
 }
 
 extension View {
-    func withNeubrutalismDesign(maxWidth: CGFloat? = nil, width: CGFloat? = nil, height: CGFloat, backgroundColor: Color = .white, offsetVal: CGFloat = 4) -> some View {
+    func withNeubrutalismDesign(maxWidth: CGFloat? = nil, width: CGFloat? = nil, height: CGFloat, backgroundColor: Color = Color(uiColor: .systemBackground), offsetVal: CGFloat = 4) -> some View {
         modifier(NeubrutalismViewModifier(maxWidth: maxWidth, width: width, height: height, backgroundColor: backgroundColor, offsetVal: offsetVal))
     }
 }

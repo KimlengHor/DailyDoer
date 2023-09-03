@@ -21,11 +21,11 @@ struct InformationView: View {
                 .padding(.bottom, 10)
             VStack(spacing: 17) {
                 
-                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
+                NeubrutalismButton(maxWidth: .infinity, height: 48, backgroundColor: Color(uiColor: .systemBackground), action: {
                     
                 }, label: informationButton(text: "Give Feedbacks"))
                 
-                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
+                NeubrutalismButton(maxWidth: .infinity, height: 48, backgroundColor: Color(uiColor: .systemBackground), action: {
                     
                 }, label: informationButton(text: "Suggest Features"))
             }
@@ -33,22 +33,22 @@ struct InformationView: View {
             Text("MORE")
                 .font(.footnote)
                 .bold()
-                .foregroundColor(Color.gray)
+                .foregroundColor(Color(uiColor: .secondaryLabel))
                 .padding(.bottom, 10)
                 .padding(.top, 30)
             
             VStack(spacing: 17) {
                 
-                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
+                NeubrutalismButton(maxWidth: .infinity, height: 48, backgroundColor: Color(uiColor: .systemBackground), action: {
                     
                 }, label: informationButton(text: "Terms and condition"))
                 
                 
-                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
+                NeubrutalismButton(maxWidth: .infinity, height: 48, backgroundColor: Color(uiColor: .systemBackground), action: {
                     
                 }, label: informationButton(text: "Privacy Policy"))
                 
-                NeubrutalismButton(maxWidth: .infinity, height: 48, action: {
+                NeubrutalismButton(maxWidth: .infinity, height: 48, backgroundColor: Color(uiColor: .systemBackground), action: {
                     
                 }, label: informationButton(text: "About Me"))
             }
@@ -85,6 +85,7 @@ extension InformationView {
             Text(text)
                 .font(.headline)
                 .fontWeight(.medium)
+                .foregroundColor(Color(uiColor: .label))
             
             Spacer()
         }
