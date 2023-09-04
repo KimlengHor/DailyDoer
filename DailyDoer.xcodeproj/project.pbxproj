@@ -84,7 +84,6 @@
 				716E68B42A7324E50010E89F /* Style */,
 				716E68B12A731F7E0010E89F /* Extension */,
 				716E68AE2A7319D70010E89F /* ViewModel */,
-				716E68AD2A7319D10010E89F /* Model */,
 				716E68AC2A7319C90010E89F /* View */,
 				716E68972A7318B90010E89F /* DailyDoerApp.swift */,
 				716E689B2A7318BD0010E89F /* Assets.xcassets */,
@@ -112,13 +111,6 @@
 				71ACDC3B2A76CB9B007CB6D5 /* InformationView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		716E68AD2A7319D10010E89F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		716E68AE2A7319D70010E89F /* ViewModel */ = {
@@ -387,7 +379,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +408,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

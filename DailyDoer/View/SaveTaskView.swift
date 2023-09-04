@@ -24,7 +24,7 @@ struct SaveTaskView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(20)
-        .background(.white)
+        .background(Color(uiColor: .secondarySystemGroupedBackground))
         .cornerRadius(5)
         .padding(24)
         .onAppear {
